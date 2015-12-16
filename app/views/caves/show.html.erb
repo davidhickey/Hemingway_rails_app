@@ -2,3 +2,5 @@
 <p><%= @cafe.address %></p>
 <p><%= @cafe.about %></p>
 <%= link_to "<< Back to Cafes List", caves_path %>
+<%= link_to "delete", cafe_path(@cafe), method: :delete, data: {confirm: "Really delete this cafe?"} %>
+<%= link_to "edit", edit_cafe_path(@cafe) %>
