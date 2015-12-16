@@ -11,32 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216201514) do
+ActiveRecord::Schema.define(version: 20151216224253) do
 
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.text     "truth"
-    t.text     "body"
-    t.text     "bev_and_food"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "author_id"
-  end
+# Could not dump table "articles" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
-  add_index "articles", ["author_id"], name: "index_articles_on_author_id"
-
-  create_table "authors", force: :cascade do |t|
-    t.string   "username",                                                              null: false
-    t.string   "email",                                                                 null: false
-    t.string   "crypted_password",                                                      null: false
-    t.string   "salt",                                                                  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "bio"
-    t.text     "#<ActiveRecord::ConnectionAdapters::TableDefinition:0x007fdb9a47fc20>"
-  end
-
-  add_index "authors", ["email"], name: "index_authors_on_email", unique: true
+# Could not dump table "authors" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "caves", force: :cascade do |t|
     t.string   "name"
