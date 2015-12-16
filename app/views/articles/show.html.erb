@@ -1,6 +1,8 @@
 <div class="transbox">
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
+<p>Created on: <%= @article.created_at %></p>
+<p>Updated on: <%= @article.updated_at %></p>
 <%= link_to "<< Back to Articles List", articles_path %>
 <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Do you actually want to delete this?"} %>
 <%= link_to "edit", edit_article_path(@article) %>

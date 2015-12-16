@@ -11,17 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215190146) do
+ActiveRecord::Schema.define(version: 20151216173815) do
 
   create_table "articles", force: :cascade do |t|
-    t.string   "author"
     t.string   "title"
     t.text     "truth"
     t.text     "body"
     t.text     "bev_and_food"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "author_id"
   end
+
+  add_index "articles", ["author_id"], name: "index_articles_on_author_id"
 
   create_table "authors", force: :cascade do |t|
     t.string   "username",                                                              null: false
