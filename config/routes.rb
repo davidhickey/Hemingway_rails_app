@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   # root to: 'articles#index'
   root to: 'author_sessions#new'
 
-  resources :bars
+  resources :bars do
+    resources :ideas
+  end
   resources :ideas
   resources :creators
   resources :author_sessions, only: [ :new, :create, :destroy ]

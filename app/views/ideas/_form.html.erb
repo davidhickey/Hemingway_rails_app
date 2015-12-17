@@ -1,20 +1,26 @@
-<%= form_for(@idea) do |f| %>
+<h3>Write a few Words please.</h3>
+
+<%= form_for [ @bar, @idea ] do |f| %>
   <ul>
   <% @idea.errors.full_messages.each do |error| %>
     <li><%= error %></li>
     <% end %>
   </ul>
-  <!-- <p>
-  <%= f.label :author %><br />
-  <%= f.text_field :author %>
-</p> -->
   <p>
-    <%= f.label :title %> <br />
-    <%= f.text_field :title %>
+    Please submit username. <br />
+    <%= f.text_field :author %>
   </p>
   <p>
-    <%= f.label :body %><br />
+    One true sentence please. <br />
+    <%= f.text_field :truth %>
+  </p>
+  <p>
+    Your thoughts please. <br />
     <%= f.text_area :body %>
+  </p>
+  <p>
+    Names and amounts of beverages consumed please.<br />
+    <%= f.text_area :bev_and_food %>
   </p>
   <p>
     <%= f.submit %>

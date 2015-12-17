@@ -1,4 +1,4 @@
 class Idea < ActiveRecord::Base
-  belongs_to :author
-  belongs_to :cafe
+  belongs_to :creator
+  belongs_to :bar
 end

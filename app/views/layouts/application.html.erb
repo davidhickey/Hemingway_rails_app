@@ -9,8 +9,7 @@
 <body>
 <div id="container">
   <div id="content">
-    <%= yield %>
-    <hr>
+
     <h6>
       <% if logged_in? %>
     <%= "Logged in as #{current_user.email}" %>
@@ -20,12 +19,13 @@
     <% end %>
     <!-- <%= link_to "Home", ideas_path %> -->
   </h6>
-  <%= link_to "Add a New Bar", new_bar_path, class: "new_bar" %>
-  <%= link_to "Meet the Writers", creators_path %>
+  <%= link_to "Add to The Scene", new_bar_path, class: "new_bar" %>
+  <%= link_to "The Writers", creators_path %>
   <%= link_to "The Scene", bars_path %>
   <%= link_to "The Word", ideas_path %>
-  <%= link_to "Create the Word", new_idea_path, class: "new_idea" %>
   <a href="https://www.google.com/maps">Google Maps</a>
+  <hr>
+  <%= yield %>
 </div>
 </div>
 </body>

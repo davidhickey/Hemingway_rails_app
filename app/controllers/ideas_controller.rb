@@ -7,6 +7,7 @@ end
 
 def show
   @idea = Idea.find(params[:id])
+  @idea.bar_id = params[:bar_id]
 
   # @comment = Comment.new
   # @comment.idea_id = @idea.id
@@ -18,11 +19,12 @@ end
 
 def create
   @idea = Idea.new(idea_params)
+  @idea.bar_id = params[:bar_id]
   @idea.save
 
   flash.notice = "Idea '#{@idea.title}' Created!"
 
-  redirect_to idea_path(@idea)
+  redirect_to bars_path
 end
 
 def destroy

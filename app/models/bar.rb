@@ -1,4 +1,4 @@
 class Bar < ActiveRecord::Base
   has_many :ideas
-  has_many :authors
+  has_many :creators
 end

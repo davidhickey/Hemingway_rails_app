@@ -3,13 +3,14 @@ class BarsController < ApplicationController
 
 def index
   @bars = Bar.all
+  @ideas = Idea.all
 end
 
 def show
   @bar = Bar.find(params[:id])
 
-  # @comment = Comment.new
-  # @comment.Bar_id = @bar.id
+  @idea = Idea.new
+  @idea.bar_id = @bar.id
 end
 
 def new
