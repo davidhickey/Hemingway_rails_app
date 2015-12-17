@@ -13,11 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20151217000834) do
 
-# Could not dump table "articles" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-# Could not dump table "authors" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "truth"
+    t.text     "body"
+    t.text     "bev_and_food"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "bars", force: :cascade do |t|
     t.string   "name"
@@ -47,7 +53,7 @@ ActiveRecord::Schema.define(version: 20151217000834) do
     t.datetime "updated_at"
   end
 
-  add_index "creators", ["email"], name: "index_creators_on_email", unique: true
+  add_index "creators", ["email"], name: "index_creators_on_email", unique: true, using: :btree
 
   create_table "ideas", force: :cascade do |t|
     t.string   "author"
@@ -59,11 +65,6 @@ ActiveRecord::Schema.define(version: 20151217000834) do
     t.integer  "creator_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-  end
-
-  create_table "thoughts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
 end
