@@ -8,9 +8,9 @@
 </head>
 <body>
 <div id="container">
-  <div id="content">
+  <h1>Creativity in Style</h1>
 
-    <h6>
+    <h3>
       <% if logged_in? %>
     <%= "Logged in as #{current_user.username}" %>
     <%= link_to "Logout", logout_path %>
@@ -18,15 +18,15 @@
     <%= link_to "Login", login_path %>
     <% end %>
     <!-- <%= link_to "Home", ideas_path %> -->
-  </h6>
+  </h3>
+  <h3>
   <%= link_to "Add to The Scene", new_bar_path, class: "new_bar" %>
   <%= link_to "The Writers", creators_path %>
   <%= link_to "The Scene", bars_path %>
   <%= link_to "The Word", ideas_path %>
   <a href="https://www.google.com/maps">Google Maps</a>
-  <hr>
+</h3>
+</div>
   <%= yield %>
-</div>
-</div>
 </body>
 </html>
