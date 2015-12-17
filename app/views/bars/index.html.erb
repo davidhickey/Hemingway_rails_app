@@ -4,8 +4,7 @@
   <% @bars.each do |bar| %>
     <li>
       <%= link_to bar.name, bar_path(bar) %>
+      <%= bar.address %>
     </li>
   <% end %>
 </ul>
-
-<%= link_to "Add a New Bars", new_bar_path, class: "new_bar" %>
