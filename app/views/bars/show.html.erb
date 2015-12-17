@@ -1,9 +1,11 @@
 <h1><%= @bar.name %></h1>
 <p>Address: <%= @bar.address %></p>
 <p>About: <%= @bar.about %></p>
+<hr>
 <h3> Past Words </h3>
 <%= render partial: 'bars/idea', collection: @bar.ideas %>
+<hr>
 <%= render partial: 'ideas/form' %>
-<%= link_to "<< Back to Bars List", bars_path %>
+<%= link_to "<< Back to The Scene", bars_path %>
 <%= link_to "delete", bar_path(@bar), method: :delete, data: {confirm: "Really delete this bar?"} %>
 <%= link_to "edit", edit_bar_path(@bar) %>
