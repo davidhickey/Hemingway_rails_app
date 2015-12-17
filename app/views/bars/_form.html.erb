@@ -1,0 +1,24 @@
+<%= form_for(@bar) do |f| %>
+  <ul>
+  <% @bar.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <div id="textbox"
+    <%= f.label :about %><br />
+    <%= f.text_area :about %>
+  </p>
+</div>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

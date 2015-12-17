@@ -1,0 +1,30 @@
+<body>
+  <div id="content">
+<p id="notice"><%= notice %></p>
+
+<p><h1>
+  <%= @creator.username %>
+</h1></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @creator.email %>
+</p>
+<p>
+  <strong>Bio(Tell us a little about yourself): </strong>
+<%= @creator.bio %>
+</p>
+<!-- <p>
+  <strong>Password:</strong>
+  <%= @creator.password %>
+</p>
+
+<p>
+  <strong>Password confirmation:</strong>
+  <%= @creator.password_confirmation %>
+</p> -->
+
+<%= link_to 'Edit', edit_creator_path(@creator) %> |
+<%= link_to 'Back', creators_path %>
+</div>
+</body>

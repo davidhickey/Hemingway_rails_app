@@ -1,0 +1,14 @@
+<body>
+  <div id="content">
+<h1>The Scene</h1>
+
+<ul id="bars">
+  <% @bars.each do |bar| %>
+    <li>
+      <%= link_to bar.name, bar_path(bar) %>
+      <%= bar.address %>
+    </li>
+  <% end %>
+</ul>
+</div>
+</body>

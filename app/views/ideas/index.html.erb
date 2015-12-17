@@ -1,0 +1,16 @@
+<body>
+  <div id="content">
+<h1>The Word</h1>
+<h3>“All you have to do is write one true sentence. Write the truest sentence that you know.”</h3>
+
+<ul id="ideas">
+  <% @ideas.each do |idea| %>
+    <li>
+      <%= link_to idea.truth, idea_path(idea) %>
+      <%= idea.created_at.strftime("Created on: " + "%A" + ", " + "%b-%d-%Y") %>
+      <strong> By: <%=idea.author%></strong>
+    </li>
+  <% end %>
+</ul>
+</div>
+</body>

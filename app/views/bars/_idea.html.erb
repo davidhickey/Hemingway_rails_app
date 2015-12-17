@@ -1,0 +1,9 @@
+<hr>
+<div>
+  <h3>Username: <%= idea.author%></h4>
+  <h4>OTS: <%=idea.truth%>
+  <h4>Beverages: <%=idea.bev_and_food%>
+  <h4>Thoughts: <%= idea.body%></h5>
+</div>
+<%= link_to "delete", idea_path(@idea.bar_id), method: :delete, data: {confirm: "Really delete this idea?"} %>
+<%= link_to "edit", edit_idea_path(@idea.bar_id) %>

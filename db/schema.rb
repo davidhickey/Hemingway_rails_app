@@ -1,0 +1,69 @@
+# encoding: UTF-8
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
+# incrementally modify your database, and then regenerate this schema definition.
+#
+# Note that this schema.rb definition is the authoritative source for your
+# database schema. If you need to create the application database on another
+# system, you should be using db:schema:load, not running all the migrations
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+# you'll amass, the slower it'll run and the greater likelihood for issues).
+#
+# It's strongly recommended that you check this file into your version control system.
+
+ActiveRecord::Schema.define(version: 20151217000834) do
+
+# Could not dump table "articles" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+# Could not dump table "authors" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "bars", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "caves", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "creators", force: :cascade do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.integer  "bar_id"
+    t.string   "name"
+    t.string   "username"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "creators", ["email"], name: "index_creators_on_email", unique: true
+
+  create_table "ideas", force: :cascade do |t|
+    t.string   "author"
+    t.string   "title"
+    t.text     "truth"
+    t.text     "body"
+    t.text     "bev_and_food"
+    t.integer  "bar_id"
+    t.integer  "creator_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "thoughts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+end
