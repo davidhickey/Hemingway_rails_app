@@ -1,0 +1,12 @@
+<h1>All Ideas</h1>
+
+<ul id="ideas">
+  <% @ideas.each do |idea| %>
+    <li>
+      <%= link_to idea.title, idea_path(idea) %>
+      <%= idea.created_at.strftime("Created at: " + "%A" + ", " + "%b-%d-%Y")%>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Write", new_idea_path, class: "new_idea" %>
+<%= link_to "Creators", creators_path %>

@@ -2,7 +2,7 @@
 
 <p>
   <strong>Username:</strong>
-  <%= @author.username %>
+  <%= @creator.username %>
 </p>
 
 <p>
@@ -10,17 +10,17 @@
 </p>
 <p>
   <strong>Bio(Tell us a little about yourself): </strong>
-<%= @author.bio %>
+<%= @creator.bio %>
 </p>
 <!-- <p>
   <strong>Password:</strong>
-  <%= @author.password %>
+  <%= @creator.password %>
 </p>
 
 <p>
   <strong>Password confirmation:</strong>
-  <%= @author.password_confirmation %>
+  <%= @creator.password_confirmation %>
 </p> -->
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+<%= link_to 'Edit', edit_creator_path(@creator) %> |
+<%= link_to 'Back', creators_path %>

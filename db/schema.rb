@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216224253) do
+ActiveRecord::Schema.define(version: 20151217000834) do
 
 # Could not dump table "articles" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
@@ -19,10 +19,49 @@ ActiveRecord::Schema.define(version: 20151216224253) do
 # Could not dump table "authors" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
+  create_table "bars", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "caves", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
     t.string   "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "creators", force: :cascade do |t|
+    t.string   "email",            null: false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.integer  "bar_id"
+    t.string   "name"
+    t.string   "username"
+    t.text     "bio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "creators", ["email"], name: "index_creators_on_email", unique: true
+
+  create_table "ideas", force: :cascade do |t|
+    t.string   "author"
+    t.string   "title"
+    t.text     "truth"
+    t.text     "body"
+    t.text     "bev_and_food"
+    t.integer  "bar_id"
+    t.integer  "creator_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "thoughts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

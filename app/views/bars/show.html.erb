@@ -1,0 +1,6 @@
+<h1><%= @bar.name %></h1>
+<p><%= @bar.address %></p>
+<p><%= @bar.about %></p>
+<%= link_to "<< Back to Bars List", bars_path %>
+<%= link_to "delete", bar_path(@bar), method: :delete, data: {confirm: "Really delete this bar?"} %>
+<%= link_to "edit", edit_bar_path(@bar) %>
