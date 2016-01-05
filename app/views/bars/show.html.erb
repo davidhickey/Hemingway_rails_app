@@ -9,7 +9,7 @@
 <hr>
 <%= render partial: 'ideas/form' %>
 <%= link_to "<< Back to The Scene", bars_path %>
-<%= link_to "delete", bar_path(@bar), method: :delete, data: {confirm: "Really delete this bar?"} %>
-<%= link_to "edit", edit_bar_path(@bar) %>
+<%= link_to "Delete", bar_path(@bar), method: :delete, data: {confirm: "Really delete this bar?"} %>
+<%= link_to "Edit", edit_bar_path(@bar) %>
 </div>
 <body>
