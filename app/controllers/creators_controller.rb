@@ -29,7 +29,7 @@ class CreatorsController < ApplicationController
     @creator = Creator.new(creator_params)
     @creator.save
 
-    # flash.notice "Writer '#{@creator.email}' Created!"
+    flash.notice "Writer '#{@creator.name}' Created!"
 
     redirect_to creator_path(@creator)
   end
