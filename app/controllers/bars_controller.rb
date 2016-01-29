@@ -9,8 +9,12 @@ end
 def show
   @bar = Bar.find(params[:id])
 
+#changed below from @idea = Idea.new
+  @ideas = Idea.all
   @idea = Idea.new
+  # testing one below @idea.bar_id = @bar.id
   @idea.bar_id = @bar.id
+
 end
 
 def new
