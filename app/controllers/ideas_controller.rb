@@ -25,17 +25,19 @@ def create
   flash.notice = "Idea '#{@idea.title}' Created!"
 
 # changed below to @bar, nothing before
-  redirect_to bar_path
+  redirect_to bars_path
 end
 
 def destroy
+  #@idea.bar_id = Idea.find(params[:bar_id])
   @idea = Idea.find(params[:id])
-  @idea.bar_id = params[:bar_id]
+  #@idea.bar_id = params[:bar_id]
   @idea.destroy
+  #@idea.bar_id.destroy
 
   flash.notice = "Idea '#{@idea.title}' Deleted!"
 
-  redirect_to bar_path
+  redirect_to ideas_path
 end
 
 def edit
@@ -49,7 +51,7 @@ def update
   flash.notice = "Idea '#{@idea.title}' Updated!"
 
 #changing from idea_path(@idea)
-  redirect_to bar_path
+  redirect_to idea_path
 end
 
 end
