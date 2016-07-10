@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900italic|Playfair+Display+SC:400,700|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
   <title>HemingwayRailsApp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CWT</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">HOME</a></li>
+        <li><a href="#">The Scene</a></li>
+        <li><a href="#">The Work</a></li>
+        <li><a href="#">The Writers</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-1 sidenav">
+      <h1>Creativity</h1>
+    </div>
+    <div class="col-sm-1 text-center">
+      <h1>~WITH~</h1>
+    </div>
+    <div class="col-sm-1 text-center">
+      <h1>Style</h1>
+
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+
+
+
+
+<!-- <body>
 <div id="container">
   <h1>Creativity with Style</h1>
 
@@ -18,7 +72,7 @@
     <%= link_to "Login", login_path %>
     <% end %>
     <!-- <%= link_to "Home", ideas_path %> -->
-  </h3>
+  <!-- </h3>
   <h3>
   <%= link_to "Add to The Scene", new_bar_path, class: "new_bar" %>
   <%= link_to "The Writers", creators_path %>
@@ -26,7 +80,7 @@
   <%= link_to "The Word", ideas_path %>
   <a href="https://www.google.com/maps">Google Maps</a>
 </h3>
-</div>
-  <%= yield %>
-</body>
+</div> --> -->
+  <!-- <%= yield %> -->
+<!-- </body> -->
 </html>
