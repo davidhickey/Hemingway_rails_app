@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :bars do
     resources :ideas
   end
+end
   resources :ideas
   resources :creators
   resources :author_sessions, only: [ :new, :create, :destroy ]
