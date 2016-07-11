@@ -1,19 +1,18 @@
-<body>
-  <div id="content">
 <p id="notice"><%= notice %></p>
 
-<p><h1>
+<h2 class="title">
   <%= @creator.username %>
-</h1></p>
+</h2>
 
-<p>
+<hr>
+<h5 style="white-space: pre-line">
   <strong>Email:</strong>
   <%= @creator.email %>
-</p>
-<p>
+<hr>
   <strong>Bio(Tell us a little about yourself): </strong>
 <%= @creator.bio %>
-</p>
+</h5>
+
 <!-- <p>
   <strong>Password:</strong>
   <%= @creator.password %>
@@ -26,5 +25,3 @@
 
 <%= link_to 'Edit', edit_creator_path(@creator) %> |
 <%= link_to 'Back', creators_path %>
-</div>
-</body>

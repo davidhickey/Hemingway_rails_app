@@ -1,24 +1,19 @@
+<h5>
 <%= form_for(@bar) do |f| %>
   <ul>
   <% @bar.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
   </ul>
-  <p>
-    <%= f.label :name %><br />
+<hr>    <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
+<hr>    <%= f.label :address %><br />
     <%= f.text_field :address %>
-  </p>
-  <p>
+<hr>
     <div id="textbox"
     <%= f.label :about %><br />
-    <%= f.text_area :about %>
-  </p>
+    <%= f.text_area :about, :size => "30x3" %>
 </div>
-  <p>
     <%= f.submit %>
-  </p>
 <% end %>
+<h5>

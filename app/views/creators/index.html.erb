@@ -1,37 +1,34 @@
-<body>
-  <div id="content">
 <p id="notice"><%= notice %></p>
 
-<h1>The Writers</h1>
+<h2 class="title">The Writers</h1>
 
-<table>
-  <thead>
+<h5>
+  <!-- <thead>
     <tr>
       <th>Username</th>
       <th>Email</th>
       <!-- <th>Password</th>
       <th>Password confirmation</th> -->
-      <th colspan="3"></th>
+      <!-- <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead> -->
 
-  <tbody>
+  <ul>
+
     <% @creators.each do |creator| %>
-      <tr>
-        <td><%= creator.username %></td>
-        <td><%= creator.email %></td>
+      <li>
+        <%= creator.username %> |
+        <%= creator.email %> |
         <!-- <td><%= creator.password %></td>
         <td><%= creator.password_confirmation %></td> -->
-        <td><%= link_to 'Show', creator %></td>
-        <td><%= link_to 'Edit', edit_creator_path(creator) %></td>
-        <!-- <td><%= link_to 'Destroy', creator, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
+        <%= link_to 'Show', creator %> |
+        <%= link_to 'Edit', edit_creator_path(creator) %>
+  <!-- <td><%= link_to 'Destroy', creator, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+
+</li>
+<hr>
     <% end %>
-  </tbody>
-</table>
+  </ul>
+</h5>
 
-<br>
-
-<%= link_to 'New Writer', new_creator_path %>
-</div>
-</body>
+<h2 class="title"><%= link_to 'New Writer', new_creator_path %></h2>

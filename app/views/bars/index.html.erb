@@ -1,14 +1,14 @@
-<body>
-  <div id="content">
-<h1>The Scene</h1>
+<h2 class ="title">The Scene</h2>
 
 <ul id="bars">
   <% @bars.each do |bar| %>
     <li>
       <%= link_to bar.name, bar_path(bar) %>
       <%= bar.address %>
+      <hr>
     </li>
   <% end %>
 </ul>
-</div>
-</body>
+
+
+<h2 class="title"><%= link_to "Add to the Scene", new_bar_path %></h2>

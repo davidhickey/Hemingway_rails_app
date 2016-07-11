@@ -1,16 +1,12 @@
-<body>
-  <div id="content">
-<div class="transbox">
-<h1><%= @idea.truth %></h1>
-<p>Username: <%= @idea.author %></p>
-<p>Thoughts: <%= @idea.body %></p>
+
+<h2 class="title"><%= @idea.truth %></h2>
+<h5><p>Username: <%= @idea.author %></p>
+<p style="white-space: pre-line">Thoughts: <%= @idea.body %></p>
 <p>Beverages: <%= @idea.bev_and_food %></p>
 <p><%= @idea.updated_at.strftime("Updated at: " + "%A" + ", " + "%b-%d-%Y") %></p>
 <p><%= @idea.created_at.strftime("Created at: " + "%A" + ", " + "%b-%d-%Y") %></p>
+<h5>
 
 
 <%= link_to "delete", idea_path(@idea), method: :delete, data: {confirm: "Do you actually want to delete this?"} %>
 <%= link_to "edit", edit_idea_path(@idea) %>
-</div>
-</div>
-<body>

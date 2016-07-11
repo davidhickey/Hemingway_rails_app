@@ -1,15 +1,11 @@
-<h2 class="title">The Word</h2>
-<h3>“All you have to do is write one true sentence. Write the truest sentence that you know.”</h3>
 
+<h2 class="title">Recent Submissions</h2>
 <ul id="ideas">
   <% @ideas.each do |idea| %>
     <li>
       <%= link_to idea.truth, idea_path(idea) %>
       <%= idea.created_at.strftime("Created on: " + "%A" + ", " + "%b-%d-%Y") %>
       <strong> By: <%=idea.author%></strong>
-      <hr>
     </li>
   <% end %>
 </ul>
-
-<h2 class="title"><%= link_to "Add to The Word", new_idea_path %></h2>

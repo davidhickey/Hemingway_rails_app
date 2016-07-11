@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root to: 'articles#index'
-  root to: 'ideas#new'
+  root 'welcome#root'
 
   resources :bars do
     resources :ideas
@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'author_sessions#new'
   get 'logout' => 'author_sessions#destroy'
+  get '/welcome' => 'welcome#root'
+
 
 end

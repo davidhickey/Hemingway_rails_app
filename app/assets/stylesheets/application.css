@@ -47,6 +47,27 @@ div.col-md-12.text-center {
   background-color: white;
 }
 
+li {
+list-style-type: none;
+text-align: left;
+font-family: 'Playfair Display', serif;
+
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+
+}
+
+a {
+  font-family: 'Playfair Display SC', serif;
+
+}
+
+h5{
+  font-family: 'Playfair Display', serif;
+
+}
 
 .bin {
   position: inherit;
@@ -106,6 +127,16 @@ div.col-md-12.text-center {
 
     }
 
+    .title{
+      position: inherit;
+      font-family: 'Playfair Display SC', serif;
+      color: black;
+      padding-top: 2%;
+      padding-bottom: 10%;
+
+
+    }
+
     /* Set black background color, white text and some padding */
     footer {
       position: relative;
@@ -116,7 +147,14 @@ div.col-md-12.text-center {
       color: white;
       padding: 15px;
       margin-top :30% !important;
+      font-family: 'Playfair Display', serif;
+
+
     }
+
+
+
+
 
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {

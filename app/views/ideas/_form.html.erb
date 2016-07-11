@@ -1,5 +1,7 @@
 <h3>Write a few more Words please.</h3>
+<hr>
 
+<h5>
 <%= form_for [ @bar, @idea ] do |f| %>
   <ul>
   <% @idea.errors.full_messages.each do |error| %>
@@ -10,19 +12,24 @@
     Username please. <br />
     <%= f.text_field :author %>
   </p>
+  <hr>
   <p>
     One true sentence please. <br />
-    <%= f.text_field :truth %>
+    <%= f.text_field :truth, :size => "40" %>
   </p>
+  <hr>
   <p>
     Your thoughts please. <br />
-  <%= f.text_area :body %>
+  <%= f.text_area :body, :size => "30x6" %>
   </p>
+  <hr>
   <p>
     Names and amounts of beverages consumed please.<br />
-    <%= f.text_area :bev_and_food %>
+    <%= f.text_area :bev_and_food, :size => "30x3" %>
   </p>
+  <hr>
   <p>
     <%= f.submit %>
   </p>
   <% end %>
+  <h5>
