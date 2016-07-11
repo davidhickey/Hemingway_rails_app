@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # root to: 'articles#index'
-  root to: 'author_sessions#new'
+  root to: 'ideas#new'
 
   resources :bars do
     resources :ideas

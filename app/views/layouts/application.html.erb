@@ -28,12 +28,16 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">HOME</a></li>
-        <li><a href="#">The Scene</a></li>
-        <li><a href="#">The Work</a></li>
-        <li><a href="#">The Writers</a></li>
+        <li>  <%= link_to "The Scene", bars_path %>
+</li>
+        <li>  <%= link_to "The Word", ideas_path %>
+</li>
+        <li>  <%= link_to "The Writers", creators_path %>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li> <span class="glyphicon glyphicon-log-in">  <%= link_to "Login", login_path %></span>
+</li>
       </ul>
     </div>
   </div>
@@ -51,6 +55,10 @@
       <h1 class="style">Style</h1>
 </div>
 </div>
+
+<%= yield %>
+
+
 </div>
 
 <footer class="container-fluid text-center">
