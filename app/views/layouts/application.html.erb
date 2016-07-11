@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="container-fluid bin">
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -40,20 +41,23 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
-    <div class="col-sm-1 sidenav">
-      <h1>Creativity</h1>
+    <div class="col-md-12 text-center">
+      <h1 class="creativity">Creativity</h1>
     </div>
-    <div class="col-sm-1 text-center">
-      <h1>~WITH~</h1>
+    <div class="col-md-12 text-center pic">
+      <h1 class="with">~WITH~</h1>
     </div>
-    <div class="col-sm-1 text-center">
-      <h1>Style</h1>
-
+    <div class="col-md-12 text-center">
+      <h1 class="style">Style</h1>
+</div>
+</div>
 </div>
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+
+</div>
 
 </body>
 
@@ -80,7 +84,7 @@
   <%= link_to "The Word", ideas_path %>
   <a href="https://www.google.com/maps">Google Maps</a>
 </h3>
-</div> --> -->
+</div> -->
   <!-- <%= yield %> -->
 <!-- </body> -->
 </html>
