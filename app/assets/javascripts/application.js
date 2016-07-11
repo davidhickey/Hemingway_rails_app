@@ -14,5 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-alert("Hi there! I'm currently in the midst of adding functionality to this site to make it more user-friendly. Stay tuned!")
